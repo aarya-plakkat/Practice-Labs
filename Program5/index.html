@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/icons/icon-192x192.png" />
+  <title>PWA Starter</title>
+</head>
+<body>
+  <header>
+    <h1>My PWA</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="themeToggle">Toggle Theme</button>
+  </header>
+
+  <main id="app">Loading...</main>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').then(registration => {
+          console.log('ServiceWorker registered with scope:', registration.scope);
+        }).catch(err => {
+          console.log('ServiceWorker registration failed:', err);
+        });
+      });
+    }
+  </script>
+
+div class="container">
+<h1>Welcome to My PWA</h1>
+<p>This is a sample PWA with service worker caching and images.</p>
+
+<div class="image-gallery">
+    <img src="Images/img1.jpg" alt="Image 1" />
+    <img src="Images/img2.jpg" alt="Image 2" />
+    <img src="Images/img3.jpg" alt="Image 3" />
+  </div>
+  
+
+<p><a href="about.html">About</a> | <a href="contact.html">Contact</a></p>
+</div>
+</body>
+</html>

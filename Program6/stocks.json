@@ -1,0 +1,37 @@
+[
+  {
+    "symbol": "AAPL",
+    "name": "Apple Inc.",
+    "price": 189.44,
+    "change": "+1.15%",
+    "volume": "67.8M"
+  },
+  {
+    "symbol": "GOOGL",
+    "name": "Alphabet Inc.",
+    "price": 2789.24,
+    "change": "-0.42%",
+    "volume": "1.9M"
+  },
+  {
+    "symbol": "MSFT",
+    "name": "Microsoft Corp.",
+    "price": 312.56,
+    "change": "+0.82%",
+    "volume": "23.6M"
+  },
+  {
+    "symbol": "TSLA",
+    "name": "Tesla Inc.",
+    "price": 708.12,
+    "change": "+2.04%",
+    "volume": "30.1M"
+  },
+  {
+    "symbol": "AMZN",
+    "name": "Amazon.com Inc.",
+    "price": 3412.30,
+    "change": "-0.88%",
+    "volume": "4.2M"
+  }
+]

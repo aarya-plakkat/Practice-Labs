@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <title>Stock Viewer PWA</title>
+  <style>
+  body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+  color: #333;
+}
+
+#stock-list {
+  margin-top: 20px;
+}
+
+.stock-card {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #007bff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+</style> 
+</head>
+<body>
+  <h1>📈 Stock Prices</h1>
+  <div id="stock-list">Loading...</div>
+  <script src="app.js"></script>
+</body>
+</html>

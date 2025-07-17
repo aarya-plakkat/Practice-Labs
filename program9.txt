@@ -1,0 +1,72 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Gesture Detector Demo',
+      home: const GestureDemo(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class GestureDemo extends StatefulWidget {
+  const GestureDemo({super.key});
+
+  @override
+  State<GestureDemo> createState() => _GestureDemoState();
+}
+
+class _GestureDemoState extends State<GestureDemo> {
+  String _gesture = 'Perform a Gesture';
+
+  void _onDoubleTap() {
+    setState(() {
+      _gesture = 'Double Tap Detected';
+    });
+  }
+
+  void _onHorizontalDrag(DragEndDetails details) {
+    if (details.primaryVelocity != null) {
+      if (details.primaryVelocity! > 0) {
+        setState(() {
+          _gesture = 'Swipe Right Detected';
+        });
+      } else {
+        setState(() {
+          _gesture = 'Swipe Left Detected';
+        });
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Gesture Detector Example'),
+        centerTitle: true,
+      ),
+      body: GestureDetector(
+        onDoubleTap: _onDoubleTap,
+        onHorizontalDragEnd: _onHorizontalDrag,
+        child: Container(
+          color: Colors.lightBlue.shade50,
+          child: Center(
+            child: Text(
+              _gesture,
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

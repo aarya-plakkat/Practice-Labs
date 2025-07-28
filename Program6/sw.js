@@ -6,8 +6,8 @@ self.addEventListener("install", (e) => {
     caches.open("stock").then((cache) => {
       return cache.addAll([
         "/",
-        "./assets/logo.ico",
-        "./assets/logo.png",
+        "./images/img1.jpg",
+        "./images/img2.jpg",
         "./data.json",
         "./index.html",
         "./manifest.json",

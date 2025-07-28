@@ -2,7 +2,7 @@ const CACHE_NAME = 'Aarya';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
-  '/style.css',
+  //'/style.css',
   '/app.js',
   '/manifest.json',
   '/assets/img1.jpg',

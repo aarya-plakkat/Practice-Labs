@@ -17,7 +17,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   if (username === 'admin' && password === 'password123') {
     status.style.color = 'green';
     status.textContent = 'Login successful!';
-    localStorage.setItem('loggedIn', 'true');
+    localStorage.setItem('log', 'done');
   } else {
     status.style.color = 'red';
     status.textContent = 'Invalid username or password';
